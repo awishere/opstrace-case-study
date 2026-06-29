@@ -4,6 +4,22 @@ OpsTrace is a local-first deployment workspace for engineers and builders who ne
 
 The source code is private. This repository documents the product, architecture, safety model, and engineering decisions behind the project.
 
+## Proof Links
+
+- Portfolio walkthrough: [anasnaveed.com/case-studies/opstrace.html](https://anasnaveed.com/case-studies/opstrace.html)
+- Source status: private, documented here with screenshots and architecture notes
+- Best proof signal: backend-heavy deployment workflow, readiness checks, guarded execution, redaction, and audit reporting
+
+## Screenshots
+
+| Control center | Target planner |
+| --- | --- |
+| ![OpsTrace control center](assets/control-center.png) | ![OpsTrace target planner](assets/target-planner.png) |
+
+| Execution plan | Deployment report |
+| --- | --- |
+| ![OpsTrace execution plan](assets/execution-plan.png) | ![OpsTrace deployment report](assets/report.png) |
+
 ## Problem
 
 Deployments often fail for boring reasons: missing environment variables, unclear server state, undocumented commands, weak rollback notes, and no clean record of what happened. This is especially painful for small teams, freelancers, and AI-assisted builders who need deployment support without handing secrets or production access to an external agent.
@@ -19,6 +35,14 @@ OpsTrace was built around a simple goal: help a developer get from an app repo t
 - Read-only inspectors for SSH servers, PostgreSQL databases, S3-compatible storage, and cloud account visibility
 - Redaction and policy checks before AI receives project or deployment context
 - MCP context bridge exposing safe project/session/report context to local AI clients
+
+## What A Reviewer Can Verify Here
+
+- The product has a concrete workflow, not just a vague AI assistant claim
+- The UI covers project control, target planning, execution planning, and reporting
+- The architecture separates scanning, planning, readiness, execution, verification, and endpoint records
+- The safety model is explicit: local credentials, redaction, approvals, and narrow allowed operations
+- The project maps directly to backend, DevOps, internal tooling, and practical AI workflow roles
 
 ## Architecture
 
@@ -89,4 +113,3 @@ The AI layer is treated as a planner and reviewer, not an unrestricted operator.
 OpsTrace demonstrates my ability to build backend-heavy operational software with real-world constraints: secrets, deployment risk, local tooling, user trust, and production evidence.
 
 It is strongest as proof of systems thinking, backend architecture, developer tooling, and practical AI workflow design.
-
