@@ -10,6 +10,17 @@ The source code is private. This repository documents the product, architecture,
 - Source status: private, documented here with screenshots and architecture notes
 - Best proof signal: backend-heavy deployment workflow, readiness checks, guarded execution, redaction, and audit reporting
 
+## 60-Second Reviewer Check
+
+If you are reviewing this for a backend, DevOps, internal tooling, or AI workflow role, check these first:
+
+- The screenshots show a real product surface: control center, target planner, execution plan, and deployment report
+- The workflow is specific: scan a project, plan a deployment target, run readiness checks, require approval, execute a narrow path, verify the endpoint, and save an audit report
+- The safety model is not decorative: secrets stay local, AI receives redacted context, risky steps require approval, and unsupported paths are blocked
+- The backend scope is visible: CLI, FastAPI local UI, SQLite state, project scanning, Docker and Compose detection, SSH inspection, report generation, and policy checks
+
+This is not open source. Treat it as a public case study with product screenshots and architecture evidence.
+
 ## Screenshots
 
 | Control center | Target planner |
